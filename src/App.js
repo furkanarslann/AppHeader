@@ -4,11 +4,14 @@ import Header from './header/Header';
 
 const headerApp = () => {
 
+  const burgerIcon = require('../assets/burger.png');
+  const brandIcon = require('../assets/brand.png');
+  const editIcon = require('../assets/edit.png');
 
   return (
     <SafeAreaView style={styles.container}>
 
-      <Header />
+      <Header iconLeft={burgerIcon} iconCenter={brandIcon} iconRight={editIcon} />
 
     </SafeAreaView>
 

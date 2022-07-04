@@ -2,18 +2,13 @@ import { View, Image, Text } from 'react-native';
 import React from 'react';
 import styles from './Header.style';
 
-const Header = () => {
-
-    const burgerIcon = require('../../assets/burger.png');
-    const editIcon = require('../../assets/edit.png');
-    const brandIcon = require('../../assets/brand.png');
-    // bu path'leri diğer branchte parametre olarak yollamaya çalıştım ama olmadı.
+const Header = ({ iconLeft, iconCenter, iconRight }) => {
 
     return (
         <View style={styles.header}>
-            <Image style={styles.iconLeft} source={burgerIcon} />
-            <Image style={styles.iconCenter} source={brandIcon} />
-            <Image style={styles.iconRight} source={editIcon} />
+            <Image style={styles.iconLeft} source={iconLeft} />
+            <Image style={styles.iconCenter} source={iconCenter} />
+            <Image style={styles.iconRight} source={iconRight} />
         </View>
     );
 }
